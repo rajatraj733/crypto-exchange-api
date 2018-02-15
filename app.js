@@ -5,10 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-
-
-
-
 var index = require('./routes/index');
 var users = require('./routes/users');
 var api = require('./routes/api');
@@ -62,7 +58,7 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-// app.listen(9000);
+app.listen(9000,  () => console.log('Example app listening on port 9000!'));
 
 
 // Running daemons
